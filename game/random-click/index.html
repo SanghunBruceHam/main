@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>팡팡클릭 네온월드 | 중독성 클릭 게임, 친구와 최고기록 경쟁!</title>
+  <meta name="description" content="귀여운 강아지와 고양이 캐릭터와 함께하는 클릭 게임! 30초 동안 최대 점수에 도전하세요. 모바일 최적화, 최고 기록 랭킹, 실시간 점수 공유 지원.">
+  <meta name="keywords" content="클릭 게임, 타이핑 게임, 강아지 게임, 고양이 게임, 캐주얼 게임, 네온월드, 최고 기록, 점수 공유, 친구 대결, 모바일 게임">
+  <meta name="author" content="Widenex Interactive">
+  <meta property="og:title" content="팡팡클릭 네온월드 | 클릭 게임 최고 기록에 도전!" />
+  <meta property="og:description" content="귀엽고 밝은 네온 테마의 클릭 게임! 최고 점수에 도전하고 친구와 랭킹을 경쟁해보세요." />
+  <meta property="og:image" content="https://wp.mahalohana-bruce.com/game/random-click/og-image.png">
+  <meta property="og:url" content="https://wp.mahalohana-bruce.com/game/random-click/index.html" />
+  <link rel="canonical" href="https://wp.mahalohana-bruce.com/game/random-click/index.html" />
+  <link rel="icon" href="https://wp.mahalohana-bruce.com/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KPV6LHBP');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ED4W9VBFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0ED4W9VBFJ');
+  </script>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5508768187151867"
+    crossorigin="anonymous"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-ad"
+    src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+  <style>
+    :root {
+      --pang-gap: 8px;
+      --pang-font-size: 1em;
+    }
+    html, body {
+      font-size: var(--pang-font-size);
+      font-family: 'Jua', sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(to bottom, #e0f7fa 0%, #ffebee 100%);
+      color: #333;
+      text-align: center;
+      transition: font-size 0.18s, color 0.18s, background 0.3s;
+    }
+    .game-container {
+      width: 92%;
+      max-width: 400px;
+      margin: 18px auto;
+      background: #fffefc;
+      padding: 15px 5px 20px 5px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      position: relative;
+      font-size: 1em;
+      min-height: 0px;
+    }
+    h1 {
+      font-size: 1.4em;
+      color: #ff4081;
+      text-shadow: 0 0 8px #ffb5d7, 0 0 1px #80d8ff;
+      margin-bottom: 6px;
+      line-height: 1.1;
+      transition: font-size 0.18s, color 0.18s;
+    }
+    button {
+      padding: 0.48em 0.95em;
+      margin: 7px var(--pang-gap, 8px);
+      border: none;
+      border-radius: 8px;
+      font-size: inherit;
+      font-family: inherit;
+      cursor: pointer;
+      color: #fff;
+      background: #4fc3f7;
+      transition: 0.16s, font-size 0.18s;
+      box-shadow: 0 2px 7px rgba(80, 143, 238, 0.08);
+    }
+    button:focus {
+      outline: 2.5px solid #1976d2 !important;
+      outline-offset: 1.5px;
+      z-index: 999;
+    }
+    #startButton { background: #4fc3f7; }
+    #resetButton { background: #ef5350; }
+    #toggleHelp { background: #ffee58; color: #333; }
+    #toggleTheme {
+      position: absolute; top: 8px; right: 8px; z-index: 10;
+      background: #222;
+      color: #fff;
+      font-size: 1.2em;
+      padding: 4px 10px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 1px 6px #0001;
+      transition: background 0.2s, color 0.2s;
+    }
+    #openSettings {
+      position: absolute; top: 8px; left: 8px; z-index: 10;
+      background: #f1f1f1; color: #444;
+      font-size: 1.2em;
+      padding: 4px 10px;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 1px 6px #0001;
+      transition: background 0.2s, color 0.2s;
+    }
+    #openSettings:hover { background: #ececec; color: #222; }
+    #settingsPanel {
+      display: none;
+      position: fixed;
+      top: 58px; left: 13px; width: 180px;
+      background: #fff;
+      border-radius: 11px;
+      box-shadow: 0 4px 24px #0003;
+      padding: 13px 13px 10px 13px;
+      z-index: 99999;
+      border: 1.3px solid #eee;
+      font-size: 1em;
+      text-align: left;
+      animation: fadeIn 0.19s;
+       min-width: 190px;
+  max-width: 270px;
+  box-sizing: border-box;
+  word-break: break-all;
+    }
+    @keyframes fadeIn { from {opacity:0; transform:translateY(-8px);} to {opacity:1; transform:none;} }
+    #settingsPanel .settings-row { margin-bottom: 8px; }
+    #settingsPanel .font-size-btns {
+     flex-wrap: wrap; /* 버튼 줄바꿈 허용 */
+    }
+    #settingsPanel .font-size-btns button {
+      background: #ededed; color: #222;
+      padding: 3px 11px; border-radius: 7px; font-size: 1.3em;
+      box-shadow: none; margin: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+    #settingsPanel .font-size-btns button:active { background: #eee; }
+    #settingsPanel .font-size-value {
+  display: inline-block;
+  min-width: 32px;
+  max-width: 48px;   /* 숫자가 너무 커질 때 한계 지정 */
+  font-size: 1em;
+  text-align: center;
+  color: #222;
+  background: #f8f8f8;
+  border-radius: 6px;
+  margin-left: 6px;
+  overflow-wrap: break-word;   /* 길면 줄바꿈 */
+  word-break: break-all;
+  padding: 0 5px;
+  vertical-align: middle;
+}
+    #settingsPanel .close-btn {
+      text-align: right;
+      margin-top: 7px;
+    }
+    #settingsPanel .close-btn button {
+      color: #222;
+      background: #ededed;
+      border: none;
+      padding: 4px 13px;
+      border-radius: 7px;
+      font-size: 1em;
+      margin:0;
+      box-shadow: none;
+    }
+    #settingsPanel .close-btn button:hover { background: #e0e0e0;}
+    #clickButton, #fakeButton {
+      position: absolute;
+      width: 3.6em;
+      height: 3.6em;
+      border: none;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 2px 10px rgba(120,120,120,0.18);
+      transition: none !important;
+      opacity: 1;
+      z-index: 50;
+      display: none;
+    }
+    #clickButton.hide, #fakeButton.hide { display: none !important; }
+    #clickButton { background-image: url('https://wp.mahalohana-bruce.com/game/random-click/dog.png'); }
+    #fakeButton { background-image: url('https://wp.mahalohana-bruce.com/game/random-click/cat.png'); }
+    #bonusButton {
+      display: none; position:absolute; width:3em; height:3em;
+      background:transparent; border:none;
+      background-image:url('https://cdn-icons-png.flaticon.com/512/616/616490.png');
+      background-size:cover; border-radius:50%; z-index:99;
+      box-shadow: 0 0 8px #1976d299;
+    }
+    #bonusButton:focus {
+      outline: 2.5px solid #d81b60;
+      outline-offset: 1.5px;
+      z-index: 1000;
+    }
+    .score-popup {
+      position: absolute;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff4081;
+      text-shadow: 0 1px 4px #fff7;
+      animation: popup 1s ease-out forwards;
+      pointer-events: none;
+      z-index: 999;
+    }
+    @keyframes popup {
+      0%   { opacity: 1; transform: translateY(0) scale(1);}
+      60%  { opacity: 1; transform: translateY(-16px) scale(1.2);}
+      100% { opacity: 0; transform: translateY(-32px) scale(0.9);}
+    }
+    p {
+      margin: 3px 0;
+      font-size: 1em;
+      line-height: 1.5;
+      transition: font-size 0.18s, color 0.18s;
+    }
+    .title-flash { animation: flash 1.05s ease-in-out; }
+    @keyframes flash {
+      0%,100% { color: #333; }
+      45%     { color: #ff4081; text-shadow: 0 0 12px #ffe0f7;}
+    }
+    .bonus {
+      color: #d81b60 !important;
+      font-weight: bold;
+      font-size: 1.3em;
+      text-shadow: 0 0 10px #ffd1ea;
+      animation: bonusFlash 1.1s alternate infinite;
+    }
+    @keyframes bonusFlash {
+      0%, 100% { color: #d81b60; }
+      50%      { color: #ff80ab; }
+    }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-6px); }
+      80% { transform: translateX(6px); }
+      100% { transform: translateX(0); }
+    }
+    .shake {
+      animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+    }
+    #instructions {
+      display: block;
+      background: #fff9c4;
+      color: #444;
+      border-radius: 7px;
+      padding: 0.6em 0.8em;
+      margin: 0.6em 0 0.7em 0;
+      text-align: left;
+      font-size: 0.95em;
+      line-height: 1.5;
+      transition: font-size 0.18s, color 0.18s, background 0.3s;
+    }
+    #instructions ul {
+      padding-left: 1.3em;
+      margin: 0;
+    }
+    #instructions li {
+      margin-bottom: 0.3em;
+      line-height: 1.4;
+    }
+    #instructions img {
+      vertical-align: middle;
+      height: 18px;
+    }
+    #ranking {
+      margin-top: 0.9em;
+      background: #fce4ec;
+      border-radius: 8px;
+      padding: 0.55em 0.25em 0.55em 0.25em;
+      color: #444;
+      font-size: 1em;
+      transition: font-size 0.18s, color 0.18s, background 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    .ranking-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      gap: var(--pang-gap, 8px);
+    }
+    .ranking-list li { line-height: 1.25;}
+    #newHighBadge { animation: badgeFlash 1.5s alternate infinite;}
+    @keyframes badgeFlash {
+      0%,100% { color: #d81b60;}
+      60%     { color: #ffb5d7;}
+    }
+    .score-animate { animation: scoreBounce 0.32s;}
+    @keyframes scoreBounce {
+      0% { transform: scale(1);}
+      60% { transform: scale(1.19);}
+      100% { transform: scale(1);}
+    }
+    .share-block {
+      margin-top: 1.1em;
+      background: #f9fafe;
+      border-radius: 8px;
+      padding: 0.5em 0.1em 0.5em 0.1em;
+      box-shadow: 0 2px 10px #e0e3f3;
+      width: 99%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+      transition: font-size 0.18s, color 0.18s, background 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    .share-message {
+      font-size: 1em;
+      margin-bottom: 0.3em;
+      color: #454554;
+    }
+    .share-message .share-sub {
+      font-size: 0.88em;
+      color: #666;
+      margin: 1px 0 2px 0;
+      letter-spacing: -0.2px;
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--pang-gap, 8px);
+      margin-top: 3px;
+      margin-bottom: 0;
+    }
+    /* SNS + 복사 버튼 통합 스타일 */
+    .share-buttons button {
+      background: #fff;
+      border: 1.5px solid #ffe066;
+      border-radius: 8px;
+      padding: 0.33em 0.7em;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px #ffe066, 0 0 7px #ffe066;
+      transition: background 0.18s, box-shadow 0.18s, border 0.18s;
+      font-size: 1em;
+      color: #222;
+    }
+    .share-buttons button:focus {
+      outline: 2.5px solid #ffd600;
+      outline-offset: 1.5px;
+      z-index: 1000;
+    }
+    .share-buttons button:hover {
+      filter: brightness(1.09);
+    }
+    .share-buttons button img {
+      width: 1.15em;
+      height: 1.15em;
+    }
+    #todayScore {
+      margin-top: 0.4em;
+      font-size: 0.98em;
+    }
+    #toast-msg {
+      position: fixed;
+      bottom: 1.7em;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222b;
+      color: #fff;
+      padding: 0.65em 1.25em;
+      border-radius: 12px;
+      font-size: 1em;
+      z-index: 99999;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    body.dark-mode {
+      background: linear-gradient(to bottom,#282c34 0%,#2e3240 100%);
+      color: #eaf3ff;
+    }
+    body.dark-mode .game-container,
+    body.dark-mode .share-block,
+    body.dark-mode #ranking {
+      background: #23263a;
+      color: #eaf3ff !important;
+      box-shadow: 0 2px 14px #0005;
+    }
+    body.dark-mode h1,
+    body.dark-mode h3,
+    body.dark-mode p,
+    body.dark-mode li,
+    body.dark-mode strong,
+    body.dark-mode #instructions {
+      color: #eaf3ff !important;
+    }
+    body.dark-mode #instructions { background: #373c4d; }
+    body.dark-mode #ranking { background: #26293a; }
+    body.dark-mode .ranking-list li { color: #eaf3ff !important; }
+    body.dark-mode .share-message, 
+    body.dark-mode .share-message .share-sub { color: #cbe0ff !important; }
+    /* 다크모드 SNS+복사버튼 통일 */
+    body.dark-mode .share-buttons button {
+      background: #23263a;
+      color: #ffd600 !important;
+      border: 1.5px solid #ffe066 !important;
+      box-shadow: 0 2px 12px #ffe066, 0 0 8px #ffe066;
+    }
+    body.dark-mode .share-buttons button:hover {
+      filter: brightness(1.11);
+    }
+    body.dark-mode .share-buttons button:focus {
+      outline: 2.5px solid #ffd600;
+    }
+    body.dark-mode .copy-button {
+      color: #ffd600 !important;
+      border: 1.5px solid #ffe066 !important;
+      box-shadow: 0 2px 10px #ffe066, 0 0 7px #ffe066;
+      background: #23263a;
+    }
+    body.dark-mode button,
+    body.dark-mode #toggleTheme {
+      background: #fff ;
+      color: #ffd600 !important;
+      border: 1.5px solid #ffe066;
+      box-shadow: 0 1px 8px #ffe066;
+      transition: background 0.2s, color 0.2s;
+    }
+    body:not(.dark-mode) #toggleTheme {
+      background: #222 !important;
+      color: #fff !important;
+      border: 1.5px solid #333;
+      box-shadow: none;
+    }
+    body.dark-mode #startButton, body.dark-mode .share-buttons button { background:#1e88e5;}
+    body.dark-mode #resetButton { background:#d32f2f;}
+    body.dark-mode #toggleHelp { background:#fff59d; color:#222;}
+    body.dark-mode #openSettings { background: #353c4a; color:#eee; }
+    body.dark-mode #openSettings:hover { background: #454c5c;}
+    body.dark-mode #settingsPanel { background: #222834; color: #fff; border: 1.2px solid #35374a;}
+    body.dark-mode #settingsPanel .close-btn button { background: #303a4c; color: #eee;}
+    body.dark-mode #settingsPanel .close-btn button:hover { background: #384050;}
+    body.dark-mode #settingsPanel .font-size-btns button { background: #383d4a; color: #fff;}
+    body.dark-mode #settingsPanel .font-size-btns button:active { background: #30374a;}
+    body.dark-mode #settingsPanel .font-size-value { background: #353a4b; color: #fff;}
+    #gameover-popup {
+      position: fixed;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(10,15,38,0.50);
+      z-index: 999999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    #gameover-popup.show {
+      display: flex !important;
+    }
+    #gameover-popup .gameover-inner {
+      background: #fff;
+      color: #222;
+      border-radius: 18px;
+      padding: 2.2em 1.5em 1.4em 1.5em;
+      min-width: 230px;
+      box-shadow: 0 8px 44px #0006;
+      text-align: center;
+      font-size: 1.2em;
+      max-width: 90vw;
+      margin: auto;
+    }
+    body.dark-mode #gameover-popup .gameover-inner {
+      background: #23263a;
+      color: #eaf3ff;
+    }
+    @media (max-width: 480px) {
+      .game-container { min-height: 480px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPV6LHBP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<div id="settingsPanel" style="display:none;">
+  <div class="settings-row">
+    <label>글씨 크기 조절</label>
+    <div class="font-size-btns">
+      <button id="fontSmaller" aria-label="글씨 작게">A-</button>
+      <button id="fontDefault" style="font-weight:bold;" aria-label="글씨 기본">A</button>
+      <button id="fontBigger" aria-label="글씨 크게">A+</button>
+      <span id="fontSizeValue" class="font-size-value" >15px</span>
+    </div>
+  </div>
+  <div class="close-btn">
+    <button onclick="closeSettings()" aria-label="설정 닫기">닫기</button>
+  </div>
+</div>
+  <div class="game-container" id="gameContainer">
+    <button id="openSettings" aria-label="설정 열기">⚙️</button>
+    <button id="toggleTheme" aria-label="다크/라이트모드 전환">🌙</button>
+    <h1>🐾 팡팡클릭 네온월드</h1>
+    <button id="toggleHelp" aria-label="도움말 보기/닫기">도움말 접기 📘</button>
+    <div id="instructions">
+      <ul>
+        <li>제한 시간은 30초!</li>
+        <li>🐶 강아지는 클릭! <img src="https://wp.mahalohana-bruce.com/game/random-click/dog.png" alt="강아지 캐릭터" /></li>
+        <li>🐱 고양이는 함정! <img src="https://wp.mahalohana-bruce.com/game/random-click/cat.png" alt="고양이 캐릭터" /></li>
+        <li>5초 남으면 <span style="color:#d81b60; font-weight:bold;">보너스 타임</span> (2배 점수)</li>
+        <li>10% 확률로 <span style="color:#1976d2;">보너스 버튼</span>이 등장하면 +5점!</li>
+        <li>10점마다 레벨업과 칭호가 변경돼요!</li>
+      </ul>
+    </div>
+    <p id="timer"><span id="timerLabel">남은 시간: </span>30</p>
+    <button id="clickButton" aria-label="강아지 버튼" style="display:none"></button>
+    <button id="fakeButton" aria-label="고양이 버튼" style="display:none"></button>
+    <button id="bonusButton" aria-label="보너스 버튼"></button>
+    <p id="score" role="status" aria-live="polite">클릭 수: 0</p>
+    <p id="level" role="status" aria-live="polite">레벨: 1</p>
+    <p id="title" role="status" aria-live="polite">칭호: 없음</p>
+    <p id="highScore" role="status" aria-live="polite">최고 기록: 0</p>
+    <p id="newHighBadge" style="display: none; color: #d81b60; font-weight: bold;">🏅 나의 최고 점수 갱신!</p>
+    <button id="startButton" aria-label="게임 시작">게임 시작</button>
+    <button id="resetButton" aria-label="게임 초기화">게임 초기화</button>
+    <div id="ranking">
+      <h3 style="margin-bottom:3px;">🏆 최고 기록 Top 3</h3>
+      <ul id="topScores" class="ranking-list"></ul>
+      <p id="todayScore"></p>
+    </div>
+    <div class="share-block" id="shareBlock">
+      <div class="share-message">
+        <strong>친구에게 공유하고 대결해보세요!</strong>
+        <div class="share-sub">내 점수를 바로 자랑하거나 친구를 초대할 수 있어요.</div>
+      </div>
+      <div class="share-buttons">
+        <button onclick="shareToThreads()" title="Threads" aria-label="Threads 공유">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/threads.svg" alt="Threads 아이콘" />
+        </button>
+        <button onclick="shareToFacebook()" title="Facebook" aria-label="Facebook 공유">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook 아이콘" />
+        </button>
+        <button onclick="shareToX()" title="X(Twitter)" aria-label="X 공유">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X(Twitter) 아이콘" />
+        </button>
+        <button onclick="copyScoreLink()" title="점수 복사" aria-label="점수 복사">
+          <img src="https://cdn-icons-png.flaticon.com/512/54/54702.png" alt="Copy 아이콘" />
+        </button>
+      </div>
+      <p id="copyMsg" style="color: green; display: none; width: 100%; font-size:1em; margin:6px 0 0 0;">✅ 공유 문구가 복사되었습니다!</p>
+    </div>
+  </div>
+  <audio id="soundScore" src="score.mp3"></audio>
+  <audio id="soundFail" src="fail.mp3"></audio>
+  <audio id="soundBonus" src="bonus.mp3"></audio>
+  <audio id="soundEnd" src="end.mp3"></audio>
+  <div id="toast-msg"></div>
+  <div id="gameover-popup" style="display:none;">
+    <div class="gameover-inner"></div>
+  </div>
+  <ins class="adsbygoogle"
+       style="display:block;margin:24px auto;max-width:350px;"
+       data-ad-client="ca-pub-5508768187151867"
+       data-ad-slot="8394292465"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <amp-ad
+    width="320"
+    height="100"
+    type="adsense"
+    data-ad-client="ca-pub-5508768187151867"
+    data-ad-slot="8394292465"
+    layout="responsive">
+  </amp-ad>
+  <!-- PangPangClick NeonWorld version 2024.05.25-c1 unified share btns -->
+  <script>
+const GAME_TIME = 30, BONUS_TIME = 5, BONUS_SCORE = 2, NORMAL_SCORE = 1, FAKE_PENALTY = 2, LEVEL_UP = 10;
+const timerDisplay = document.getElementById("timer"),
+  scoreDisplay = document.getElementById("score"),
+  levelDisplay = document.getElementById("level"),
+  titleDisplay = document.getElementById("title"),
+  highScoreDisplay = document.getElementById("highScore"),
+  clickButton = document.getElementById("clickButton"),
+  fakeButton = document.getElementById("fakeButton"),
+  bonusButton = document.getElementById("bonusButton"),
+  startButton = document.getElementById("startButton"),
+  resetButton = document.getElementById("resetButton"),
+  toggleHelp = document.getElementById("toggleHelp"),
+  instructions = document.getElementById("instructions"),
+  topScoresList = document.getElementById("topScores"),
+  shareBlock = document.getElementById("shareBlock"),
+  gameContainer = document.getElementById("gameContainer");
+const sndScore = document.getElementById("soundScore"),
+  sndFail = document.getElementById("soundFail"),
+  sndBonus = document.getElementById("soundBonus"),
+  sndEnd = document.getElementById("soundEnd");
+
+let gameState = {
+  timeLeft: GAME_TIME,
+  score: 0,
+  level: 1,
+  isBonus: false,
+  started: false,
+  timer: null,
+  topScores: JSON.parse(localStorage.getItem("clickTopScores") || "[0,0,0]")
+};
+
+function getForbiddenZones() {
+  const forbiddenIds = [
+    'openSettings', 'toggleTheme', 'startButton', 'resetButton', 'toggleHelp', 'shareBlock'
+  ];
+  const container = gameContainer;
+  const containerRect = container.getBoundingClientRect();
+  return forbiddenIds
+    .map(id => document.getElementById(id))
+    .filter(el => el && el.offsetParent !== null)
+    .map(el => {
+      const r = el.getBoundingClientRect();
+      return {
+        left: r.left - containerRect.left,
+        top: r.top - containerRect.top,
+        right: r.right - containerRect.left,
+        bottom: r.bottom - containerRect.top
+      };
+    });
+}
+function isOverlapping(rectA, rectB, margin=8) {
+  return !(
+    rectA.right < rectB.left + margin ||
+    rectA.left > rectB.right - margin ||
+    rectA.bottom < rectB.top + margin ||
+    rectA.top > rectB.bottom - margin
+  );
+}
+function randomPosition(button, others = []) {
+  const container = gameContainer;
+  button.style.display = 'block';
+  window.requestAnimationFrame(() => {
+    const maxX = container.clientWidth - button.offsetWidth;
+    const maxY = container.clientHeight - button.offsetHeight;
+    const topSafeZone = 80;
+    let x = 0, y = topSafeZone, tries = 0, overlapped, forbiddenOverlap;
+    const forbiddenRects = getForbiddenZones();
+    do {
+      x = Math.random() * maxX;
+      y = Math.random() * (maxY - topSafeZone) + topSafeZone;
+      const btnRect = {
+        left: x,
+        top: y,
+        right: x + button.offsetWidth,
+        bottom: y + button.offsetHeight
+      };
+      overlapped = others.some(other => {
+        if (other.style.display === "none") return false;
+        const ox = parseFloat(other.style.left || 0), oy = parseFloat(other.style.top || 0);
+        return Math.abs(x - ox) < button.offsetWidth * 0.8 && Math.abs(y - oy) < button.offsetHeight * 0.8;
+      });
+      forbiddenOverlap = forbiddenRects.some(fRect => isOverlapping(btnRect, fRect, 6));
+      tries++;
+      if (tries > 100) break;
+    } while ((y < topSafeZone || overlapped || forbiddenOverlap) && tries < 100);
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+    button.classList.remove('hide');
+  });
+}
+
+function setTimerText(time) {
+  timerDisplay.innerHTML = `<span id="timerLabel">남은 시간: </span>${time}`;
+}
+function showScorePopup(text, x, y) {
+  const popup = document.createElement("div");
+  popup.className = "score-popup";
+  popup.textContent = text;
+  popup.style.left = x + 'px';
+  popup.style.top = y + 'px';
+  popup.style.fontSize = getCurrentFontSize() * 1.2 + "px";
+  document.body.appendChild(popup);
+  setTimeout(() => popup.remove(), 800);
+}
+function showGameButtons(show) {
+  clickButton.style.display = show ? "block" : "none";
+  fakeButton.style.display = show ? "block" : "none";
+}
+function updateScoreInfo() {
+  scoreDisplay.textContent = `클릭 수: ${gameState.score}`;
+  scoreDisplay.classList.remove('score-animate');
+  void scoreDisplay.offsetWidth;
+  scoreDisplay.classList.add('score-animate');
+  gameState.level = Math.floor(gameState.score / LEVEL_UP) + 1;
+  levelDisplay.textContent = `레벨: ${gameState.level}`;
+  const newTitle = getTitle(gameState.score);
+  if (newTitle !== titleDisplay.textContent.split(': ')[1]) {
+    titleDisplay.classList.add("title-flash");
+    setTimeout(() => titleDisplay.classList.remove("title-flash"), 1000);
+    showCenterPopup(`🎉 새 칭호: ${newTitle}!`);
+  }
+  titleDisplay.textContent = `칭호: ${newTitle}`;
+}
+function getTitle(score) {
+  if (score >= 100) return "🌟 초인급 손가락";
+  if (score >= 70) return "💪 클릭 달인";
+  if (score >= 50) return "🔥 클릭 마스터";
+  if (score >= 30) return "🎯 클릭 고수";
+  if (score >= 10) return "😊 클릭 초보";
+  return "없음";
+}
+function renderTopScores() {
+  const labels = ["1위", "2위", "3위"];
+  topScoresList.innerHTML = labels.map((label, i) => `<li>${label}: ${gameState.topScores[i] || 0}</li>`).join('');
+  highScoreDisplay.textContent = `최고 기록: ${Math.max(...gameState.topScores)}`;
+}
+function updateTodayScore(){
+  const today = new Date().toISOString().slice(0,10);
+  let dailyScores = JSON.parse(localStorage.getItem('clickDailyScores') || '{}');
+  document.getElementById('todayScore').textContent =
+    dailyScores[today] ? `오늘의 최고 점수: ${dailyScores[today]}점` : '';
+}
+function saveTopScores(score) {
+  gameState.topScores.push(score);
+  gameState.topScores.sort((a, b) => b - a);
+  gameState.topScores = gameState.topScores.slice(0, 3);
+  localStorage.setItem("clickTopScores", JSON.stringify(gameState.topScores));
+  const today = new Date().toISOString().slice(0,10);
+  let dailyScores = JSON.parse(localStorage.getItem('clickDailyScores') || '{}');
+  if (!dailyScores[today] || score > dailyScores[today]) {
+    dailyScores[today] = score;
+    localStorage.setItem('clickDailyScores', JSON.stringify(dailyScores));
+  }
+  updateTodayScore();
+}
+function resetGame() {
+  clearInterval(gameState.timer);
+  gameState = { ...gameState, timeLeft: GAME_TIME, score: 0, level: 1, isBonus: false, started: false, timer: null };
+  setTimerText(GAME_TIME);
+  updateScoreInfo();
+  showGameButtons(false);
+  timerDisplay.classList.remove("bonus");
+  timerDisplay.classList.remove("timer-blink");
+  bonusButton.style.display = "none";
+}
+function endGame() {
+  clearInterval(gameState.timer);
+  gameState.started = false;
+  showGameButtons(false);
+  saveTopScores(gameState.score);
+  renderTopScores();
+  safePlay(sndEnd);
+  showGameOverPopup(gameState.score);
+  if (gameState.score >= Math.max(...gameState.topScores)) {
+    document.getElementById("newHighBadge").style.display = "block";
+    setTimeout(() => document.getElementById("newHighBadge").style.display = "none", 4000);
+  }
+}
+function safePlay(sound) {
+  try { if (sound && typeof sound.play === "function") { sound.currentTime = 0; sound.play(); } } catch {}
+}
+function showCenterPopup(msg){
+  let center = document.createElement("div");
+  center.className = "center-popup";
+  center.innerHTML = msg;
+  document.body.appendChild(center);
+  setTimeout(()=>center.classList.add("show"), 10);
+  setTimeout(()=>{center.classList.remove("show"); setTimeout(()=>center.remove(),330)}, 1200);
+}
+function showGameOverPopup(score){
+  const popup = document.getElementById('gameover-popup');
+  const inner = popup.querySelector('.gameover-inner');
+  let msg = '';
+  if(score >= 100) msg = "초인급 손가락! 전설 인정👏";
+  else if(score >= 70) msg = "클릭 달인 등극!";
+  else if(score >= 50) msg = "클릭 마스터! 멋져요!";
+  else if(score >= 30) msg = "고수의 길에 진입!";
+  else if(score >= 10) msg = "초보 탈출 가즈아~";
+  else msg = "더 도전해보자!";
+  inner.innerHTML = `<div style="font-size:1.2em;margin-bottom:8px;">🎮 게임 종료</div>
+    <div style="font-size:1.3em;font-weight:bold; color:#d81b60;margin-bottom:5px;">${score}점</div>
+    <div style="margin-bottom:12px;">${msg}</div>
+    <button id="popupCloseBtn">확인</button>`;
+  popup.classList.add('show');
+  popup.style.display = "flex";
+  document.getElementById('popupCloseBtn').onclick = function(){
+    closeGameOverPopup();
+  };
+}
+function closeGameOverPopup(){
+  const popup = document.getElementById('gameover-popup');
+  if(popup) {
+    popup.classList.remove('show');
+    popup.style.display="none";
+    setTimeout(()=>{
+      const inner = popup.querySelector('.gameover-inner');
+      if(inner) inner.innerHTML='';
+    }, 220);
+  }
+}
+window.closeGameOverPopup = closeGameOverPopup;
+
+startButton.addEventListener("click", () => {
+  if (gameState.started) return;
+  if (instructions.style.display === "block") {
+    instructions.style.display = "none";
+    toggleHelp.textContent = "도움말 보기 📘";
+  }
+  gameState = { ...gameState, timeLeft: GAME_TIME, score: 0, level: 1, isBonus: false, started: true };
+  updateScoreInfo();
+  showGameButtons(true);
+  randomPosition(clickButton, [fakeButton]);
+  randomPosition(fakeButton, [clickButton]);
+  setTimerText(GAME_TIME);
+  gameState.timer = setInterval(() => {
+    gameState.timeLeft--;
+    setTimerText(gameState.timeLeft);
+    if (Math.random() < 0.1 && bonusButton.style.display === "none" && gameState.started) {
+      randomPosition(bonusButton, [clickButton, fakeButton]);
+      bonusButton.style.display = "block";
+      setTimeout(() => { bonusButton.style.display = "none"; }, 2000);
+    }
+    if (gameState.timeLeft <= 5) {
+      timerDisplay.classList.add("timer-blink");
+    } else {
+      timerDisplay.classList.remove("timer-blink");
+    }
+    if (gameState.timeLeft === BONUS_TIME) {
+      gameState.isBonus = true;
+      timerDisplay.classList.add("bonus");
+    }
+    if (gameState.timeLeft <= 0) {
+      timerDisplay.classList.remove("bonus");
+      timerDisplay.classList.remove("timer-blink");
+      endGame();
+    }
+  }, 1000);
+});
+
+clickButton.addEventListener("click", (e) => {
+  if (!gameState.started) return;
+  gameState.score += gameState.isBonus ? BONUS_SCORE : NORMAL_SCORE;
+  updateScoreInfo();
+  safePlay(sndScore);
+  const rect = clickButton.getBoundingClientRect();
+  showScorePopup(gameState.isBonus ? "+2" : "+1", rect.left + rect.width/2, rect.top + rect.height/2);
+  randomPosition(clickButton, [fakeButton]);
+  randomPosition(fakeButton, [clickButton]);
+});
+fakeButton.addEventListener("click", (e) => {
+  if (!gameState.started) return;
+  gameState.score = Math.max(0, gameState.score - FAKE_PENALTY);
+  updateScoreInfo();
+  safePlay(sndFail);
+  fakeButton.classList.add('shake');
+  setTimeout(() => fakeButton.classList.remove('shake'), 400);
+  const rect = fakeButton.getBoundingClientRect();
+  showScorePopup("-2", rect.left + rect.width/2, rect.top + rect.height/2);
+  randomPosition(clickButton, [fakeButton]);
+  randomPosition(fakeButton, [clickButton]);
+});
+bonusButton.addEventListener("click", (e) => {
+  if (!gameState.started || bonusButton.style.display === "none") return;
+  gameState.score += 5;
+  updateScoreInfo();
+  safePlay(sndBonus);
+  const rect = bonusButton.getBoundingClientRect();
+  showScorePopup("+5", rect.left + rect.width/2, rect.top + rect.height/2);
+  bonusButton.style.display = "none";
+});
+resetButton.addEventListener("click", resetGame);
+toggleHelp.addEventListener("click", () => {
+  if (instructions.style.display === "block") {
+    instructions.style.display = "none";
+    toggleHelp.textContent = "도움말 보기 📘";
+  } else {
+    instructions.style.display = "block";
+    toggleHelp.textContent = "도움말 접기 📘";
+  }
+});
+function showToast(msg) {
+  const t = document.getElementById('toast-msg');
+  t.textContent = msg;
+  t.style.opacity = 1;
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.style.opacity = 0, 1700);
+}
+function shareToThreads() {
+  const shareText = `🐾 팡팡클릭 네온월드에서 ${gameState.score}점 기록! 너도 도전해봐 👉`;
+  const link = window.location.href;
+  navigator.clipboard.writeText(`${shareText}\n${link}`).then(() => {
+    showToast("Threads 공유 문구가 복사됨!");
+  });
+  window.open("https://www.threads.net/", "_blank");
+}
+function shareToFacebook() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+  showToast("페이스북 공유창이 열렸어요!");
+}
+function shareToX() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(`🐾 팡팡클릭 네온월드에서 ${gameState.score}점 기록! 친구랑 대결 고?`);
+  window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
+  showToast("X(트위터) 공유창이 열렸어요!");
+}
+function copyScoreLink() {
+  const shareText = `🐾 팡팡클릭 네온월드에서 ${gameState.score}점 기록!\n👉 ${window.location.href}`;
+  navigator.clipboard.writeText(shareText).then(() => {
+    showToast("복사되었습니다!");
+  });
+}
+const openSettings = document.getElementById('openSettings');
+const settingsPanel = document.getElementById('settingsPanel');
+const fontSmaller = document.getElementById('fontSmaller');
+const fontDefault = document.getElementById('fontDefault');
+const fontBigger = document.getElementById('fontBigger');
+const fontSizeValue = document.getElementById('fontSizeValue');
+let minFont = 10, maxFont = 32, defaultFont = 15;
+if(openSettings){
+  openSettings.onclick = ()=>{settingsPanel.style.display='block'; updateFontSizeValue();};
+}
+function closeSettings(){settingsPanel.style.display='none';}
+window.closeSettings = closeSettings;
+function getCurrentFontSize(){
+  return parseInt(getComputedStyle(document.documentElement).fontSize);
+}
+function setFontSize(px){
+  document.documentElement.style.fontSize = px+"px";
+  localStorage.setItem('pangpangFontSize', px+"px");
+  updateFontSizeValue();
+}
+function updateFontSizeValue(){
+  if(fontSizeValue)
+    fontSizeValue.textContent = getCurrentFontSize()+"px";
+}
+if(fontSmaller){
+  fontSmaller.onclick = function() {
+    let cur = getCurrentFontSize();
+    if(cur > minFont){
+      setFontSize(cur-1);
+    }
+  };
+  fontBigger.onclick = function() {
+    let cur = getCurrentFontSize();
+    if(cur < maxFont){
+      setFontSize(cur+1);
+    }
+  };
+  fontDefault.onclick = function() {
+    setFontSize(defaultFont);
+  };
+}
+function applyUserSettings() {
+  if(localStorage.getItem('pangpangFontSize')) {
+    document.documentElement.style.fontSize = localStorage.getItem('pangpangFontSize');
+    updateFontSizeValue();
+  } else {
+    setFontSize(defaultFont);
+  }
+}
+const toggleTheme = document.getElementById('toggleTheme');
+function updateThemeIcon() {
+  if(document.body.classList.contains('dark-mode')) {
+    toggleTheme.textContent = "☀️";
+    toggleTheme.setAttribute('aria-label', '라이트모드 전환');
+  } else {
+    toggleTheme.textContent = "🌙";
+    toggleTheme.setAttribute('aria-label', '다크모드 전환');
+  }
+}
+toggleTheme.onclick = function() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('pangpangDarkMode', document.body.classList.contains('dark-mode') ? "1" : "");
+  updateThemeIcon();
+};
+if(localStorage.getItem('pangpangDarkMode')==="1") {
+  document.body.classList.add('dark-mode');
+}
+updateThemeIcon();
+renderTopScores();
+resetGame();
+updateTodayScore();
+applyUserSettings();
+instructions.style.display = "block";
+toggleHelp.textContent = "도움말 접기 📘";
+document.getElementById('gameover-popup').classList.remove('show');
+updateFontSizeValue();
+setTimerText(GAME_TIME);
+window.addEventListener('resize', ()=>{
+  if(gameState.started){
+    randomPosition(clickButton, [fakeButton]);
+    randomPosition(fakeButton, [clickButton]);
+  }
+});
+console.log('PangPangClick NeonWorld version 2024.05.25-c1');
+  </script>
+</body>
+</html>

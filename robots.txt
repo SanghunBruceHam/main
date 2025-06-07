@@ -3,6 +3,4 @@ Allow: /
 
 Sitemap: https://www.mahalohana-bruce.com/sitemap.xml
 
-
-
-#DaumWebMasterTool:e545a81ddf5fa2df4b004b2c5507c56741a5927a9be6677f667c2e89a505182d:yhdCxaDid6gi7UVVzYPynA==
+#DaumWebMasterTool:160f060c046ce0629c1cd68a964c2d8f836de4219c3d362711b8bb43b5b92e42:yhdCxaDid6gi7UVVzYPynA==

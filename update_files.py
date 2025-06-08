@@ -4,7 +4,7 @@ from datetime import datetime
 robots_txt = """User-agent: *
 Allow: /
 
-Sitemap: https://www.mahalohana-bruce.com/sitemap.xml
+Sitemap: https://mahalohana-bruce.com/sitemap.xml
 
 #DaumWebMasterTool:160f060c046ce0629c1cd68a964c2d8f836de4219c3d362711b8bb43b5b92e42:NnJbOlYdct0Jzm/G1OzHmA==
 """

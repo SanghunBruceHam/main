@@ -1,7 +1,7 @@
 import os, hashlib
 from datetime import datetime
 
-BASE_URL = "https://games.mahalohana-bruce.com"
+BASE_URL = "https://mahalohana-bruce.com"
 SITEMAP_FILE = "sitemap.xml"
 
 def find_html_files(directory="."):

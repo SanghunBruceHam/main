@@ -3,7 +3,7 @@ name: IndexNow Auto Ping
 on:
   push:
     branches:
-      - main  # 실제 운영 브랜치로 변경
+      - main
     paths:
       - '**.html'
 
@@ -11,9 +11,20 @@ jobs:
   indexnow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
       - name: Send IndexNow Pings
         run: |
-          FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.html$')
+          FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.html$' || true)
+
+          if [ -z "$FILES" ]; then
+            echo "🔸 변경된 HTML 파일이 없습니다. IndexNow Ping 생략합니다."
+            exit 0
+          fi
+
           for file in $FILES; do
             URL="https://mahalohana-bruce.com/${file}"
             echo "🔗 Pinging: $URL"

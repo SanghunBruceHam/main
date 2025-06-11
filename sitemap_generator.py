@@ -1,7 +1,7 @@
-import os
+import os, hashlib
 from datetime import datetime
 
-BASE_URL = "https://mahalohana-bruce.com"  # 커스텀 도메인
+BASE_URL = "https://games.mahalohana-bruce.com"
 SITEMAP_FILE = "sitemap.xml"
 
 def find_html_files(directory="."):
@@ -29,8 +29,19 @@ def generate_sitemap():
         sitemap.append("    <priority>0.8</priority>")
         sitemap.append("  </url>")
     sitemap.append("</urlset>")
+
+    new_content = "\n".join(sitemap)
+
+    if os.path.exists(SITEMAP_FILE):
+        with open(SITEMAP_FILE, "r", encoding="utf-8") as f:
+            old_content = f.read()
+        if hashlib.md5(old_content.encode()).hexdigest() == hashlib.md5(new_content.encode()).hexdigest():
+            print("✅ No changes detected in sitemap.xml. Skipping write.")
+            return
+
     with open(SITEMAP_FILE, "w", encoding="utf-8") as f:
-        f.write("\n".join(sitemap))
+        f.write(new_content)
+    print("✅ sitemap.xml updated.")
 
 if __name__ == "__main__":
     generate_sitemap()

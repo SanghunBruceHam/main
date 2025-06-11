@@ -14,11 +14,3 @@ jobs:
       - name: Notify Bing IndexNow
         run: |
           curl "https://www.bing.com/indexnow?url=https://mahalohana-bruce.com/index.html&key=9a4d441f03954eb89ed9bb85fe40c36c"
-
-- name: Notify Bing for changed URLs
-  run: |
-    FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.html$')
-    for file in $FILES; do
-      ENCODED_URL="https://mahalohana-bruce.com/${file}"
-      curl "https://www.bing.com/indexnow?url=${ENCODED_URL}&key=9a4d441f03954eb89ed9bb85fe40c36c"
-    done

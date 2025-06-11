@@ -1,0 +1,21 @@
+name: IndexNow Auto Ping
+
+on:
+  push:
+    branches:
+      - main  # 실제 운영 브랜치로 변경
+    paths:
+      - '**.html'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send IndexNow Pings
+        run: |
+          FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.html$')
+          for file in $FILES; do
+            URL="https://mahalohana-bruce.com/${file}"
+            echo "🔗 Pinging: $URL"
+            curl "https://www.bing.com/indexnow?url=${URL}&key=9a4d441f03954eb89ed9bb85fe40c36c"
+          done

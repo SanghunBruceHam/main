@@ -1,4 +1,4 @@
-name: Update Sitemap on HTML Change
+name: Update Sitemap and Notify Search Engines
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push if changed
+      - name: Commit and push sitemap.xml
         if: steps.check_diff.outputs.changed == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
@@ -42,3 +42,10 @@ jobs:
           git add sitemap.xml
           git commit -m "Auto-update sitemap on HTML change"
           git push
+
+      - name: Ping Google/Bing/Yandex with updated sitemap
+        if: steps.check_diff.outputs.changed == 'true'
+        run: |
+          curl "https://www.google.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"
+          curl "https://www.bing.com/indexnow?url=https://games.mahalohana-bruce.com/sitemap.xml&key=YOUR_INDEXNOW_KEY"
+          curl "https://webmaster.yandex.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"

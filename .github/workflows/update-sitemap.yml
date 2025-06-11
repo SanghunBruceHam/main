@@ -34,15 +34,15 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Commit and push if sitemap changed
-        if: steps.check_diff.outputs.changed == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml                          # ✅ 먼저 stage
-          git pull --rebase origin main                # ✅ 그 후 pull
-          git commit -m "Auto-update sitemap on HTML change"
-          git push
+     - name: Commit and push if sitemap changed
+  if: steps.check_diff.outputs.changed == 'true'
+  run: |
+    git config --global user.name "github-actions[bot]"
+    git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    git add sitemap.xml
+    git commit -m "Auto-update sitemap on HTML change"
+    git push --force-with-lease
+
 
       - name: Submit to Google Search Console
         if: steps.check_diff.outputs.changed == 'true'

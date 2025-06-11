@@ -39,8 +39,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
-          git add sitemap.xml
+          git add sitemap.xml                          # ✅ 먼저 stage
+          git pull --rebase origin main                # ✅ 그 후 pull
           git commit -m "Auto-update sitemap on HTML change"
           git push
 
@@ -55,5 +55,5 @@ jobs:
       - name: Ping Bing/Yandex
         if: steps.check_diff.outputs.changed == 'true'
         run: |
-          curl "https://www.bing.com/indexnow?url=https://mahalohana-bruce.com/sitemap.xml&key=9a4d441f03954eb89ed9bb85fe40c36c"
-          curl "https://webmaster.yandex.com/ping?sitemap=https://mahalohana-bruce.com/sitemap.xml"
+          curl "https://www.bing.com/indexnow?url=https://games.mahalohana-bruce.com/sitemap.xml&key=9a4d441f03954eb89ed9bb85fe40c36c"
+          curl "https://webmaster.yandex.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"

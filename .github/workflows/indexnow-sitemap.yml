@@ -1,0 +1,14 @@
+name: IndexNow Sitemap Ping
+
+on:
+  schedule:
+    - cron: '0 0,12 * * *'  # 매일 오전 9시, 오후 9시 (JST 기준)
+  workflow_dispatch:        # 수동 실행도 가능
+
+jobs:
+  ping-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Bing with sitemap.xml
+        run: |
+          curl "https://www.bing.com/indexnow?url=https://mahalohana-bruce.com/sitemap.xml&key=9a4d441f03954eb89ed9bb85fe40c36c"

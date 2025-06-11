@@ -46,6 +46,6 @@ jobs:
       - name: Ping Google/Bing/Yandex with updated sitemap
         if: steps.check_diff.outputs.changed == 'true'
         run: |
-          curl "https://www.google.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"
-          curl "https://www.bing.com/indexnow?url=https://games.mahalohana-bruce.com/sitemap.xml&key=YOUR_INDEXNOW_KEY"
-          curl "https://webmaster.yandex.com/ping?sitemap=https://games.mahalohana-bruce.com/sitemap.xml"
+          curl "https://www.google.com/ping?sitemap=https://mahalohana-bruce.com/sitemap.xml"
+          curl "https://www.bing.com/indexnow?url=https://mahalohana-bruce.com/sitemap.xml&key=YOUR_INDEXNOW_KEY"
+          curl "https://webmaster.yandex.com/ping?sitemap=https://mahalohana-bruce.com/sitemap.xml"
